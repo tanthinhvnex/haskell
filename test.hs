@@ -21,3 +21,16 @@ reverseString (x:xs) = reverseString xs ++ [x]
 absoluteFunct :: [Int] -> [Int]
 absoluteFunct [] = []
 absoluteFunct xs = [abs(x)| x<-xs]
+
+-- Chứa các phần tử trùng nhau
+--concatList :: [Int] -> [Int] -> [Int] 
+--concatList xs [] = xs
+--concatList [] ys = ys
+--concatList xs ys = 
+
+-- Tích các phần tử trong list Int
+productList :: [Int] -> Int
+productList xs = if (length xs) == 1 then x else x*y
+                    where 
+                        x = head xs
+                        y = productList(tail xs)
