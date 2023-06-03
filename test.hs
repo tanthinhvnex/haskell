@@ -34,3 +34,8 @@ productList xs = if (length xs) == 1 then x else x*y
                     where 
                         x = head xs
                         y = productList(tail xs)
+
+-- Trả về list Int chỉ chứa các phần tử chẳn
+listEven :: [Int] -> [Int] 
+listEven [] = []
+listEven xs = [x| x<-xs, mod x 2 == 0]
