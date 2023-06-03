@@ -43,10 +43,7 @@ listEven xs = [x| x<-xs, mod x 2 == 0]
 -- Kiểm tra phần tử có trong mảng hay không
 isExist :: Int->[Int]->Bool
 isExist x [] = False
-isExist x xs = if y == x then True else z 
-                 where 
-                    y = head xs
-                    z = isExist x (tail xs)
+isExist x xs = if x == (head xs) then True else isExist x (tail xs) 
 
 -- Trả về tất cả các ước số nguyên dương
 findDivisor :: Int -> [Int]
