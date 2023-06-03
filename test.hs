@@ -63,3 +63,11 @@ sumPrime n = sum [i | i<-[1..n], isPrime i]
 countExist :: Int -> [Int] -> Int
 countExist x [] = 0
 countExist x xs = if x == (head xs) then 1 + countExist x (tail xs) else countExist x (tail xs)
+
+-- Trả về vị trí của a trong mảng
+indexFind :: Int->[Int]->Int
+indexFind x [] = -1
+indexFind x xs = if x == (head xs) then 0 else
+                    if y == -1 then -1 else y+1
+                        where 
+                            y = indexFind x (tail xs)
