@@ -47,3 +47,8 @@ isExist x xs = if y == x then True else z
                  where 
                     y = head xs
                     z = isExist x (tail xs)
+
+-- Trả về tất cả các ước số nguyên dương
+findDivisor :: Int -> [Int]
+findDivisor 1 = [1]
+findDivisor x = [i| i<-[1..x], mod x i == 0]
