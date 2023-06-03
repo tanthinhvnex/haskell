@@ -52,3 +52,9 @@ isExist x xs = if y == x then True else z
 findDivisor :: Int -> [Int]
 findDivisor 1 = [1]
 findDivisor x = [i| i<-[1..x], mod x i == 0]
+
+-- Kiểm tra số nguyên tố
+isPrime :: Int->Bool
+isPrime n = if n <= 1 then False else y
+                where 
+                    y = if (length (findDivisor n)) == 2 then True else False 
