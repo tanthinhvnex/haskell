@@ -59,3 +59,7 @@ isPrime n = if n <= 1 then False else y
 sumPrime :: Int -> Int
 sumPrime n = sum [i | i<-[1..n], isPrime i]
 
+-- Trả về số lần xuất hiện của biến a trong list
+countExist :: Int -> [Int] -> Int
+countExist x [] = 0
+countExist x xs = if x == (head xs) then 1 + countExist x (tail xs) else countExist x (tail xs)
